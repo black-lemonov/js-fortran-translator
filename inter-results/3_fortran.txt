@@ -1,0 +1,25 @@
+
+    program main
+    integer :: a
+real :: pi
+integer :: a
+integer :: i
+integer :: a
+
+    a = 2
+pi = 3.14
+c = (2 + 3)
+if (.not.((a > 2))) then go to M1
+end if
+M1: a = 2
+i = 0
+if (.not.((i < 5))) then go to M3
+end if
+M3: a = 2
+i = (i + 1)
+if (.not.((c > 2))) then go to M5
+end if
+M5: c = (c + 1)
+
+    end program main
+    
