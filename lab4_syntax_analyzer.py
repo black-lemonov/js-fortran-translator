@@ -33,8 +33,8 @@ def scan():
     global i, nxtsymb, row_counter
     i += 1
     if i >= len(match):
-        print('Ошибок не обнаружено')
-        sys.exit()
+        # ошибок нет
+        return 
         
     nxtsymb = match[i]
     if i >= len(match):
@@ -253,6 +253,18 @@ def while_loop():
     scan()
     compound_operator()
 
+# цикл do while
+def do_while_loop():
+    if nxtsymb != 'do': error()
+    scan()
+    compound_operator()
+    if nxtsymb != 'while': error()
+    scan()
+    if nxtsymb != '(': error()
+    scan()
+    condition()
+    if nxtsymb != ')': error()
+
 # цикл for
 def for_loop():
     if nxtsymb != 'for': error()
@@ -293,5 +305,3 @@ def print_operator():
     if nxtsymb != 'print': error()
     scan()
     expression()
-
-program()
